@@ -21,10 +21,20 @@
   <!-- Navbar  -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+      <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa-solid fa-bars" style="color: wheat;"></i>
       </button>
+
+      <!-- It poppulate when screen size is reduce. It done using jquery -->
+   
+        <select name="city" class="select-city">
+          <option value="mumbai" selected>Mumbai</option>
+          <option value="bangalore">Bangalore</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Pune">Pune</option>
+        </select>
 
       <a class="navbar-brand" href="#"><img src="../assets/Logo/logo4.png" class="nav-logo" alt=""></a>
 
@@ -34,40 +44,41 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item" id="floating-movie-card">
-            <a class="nav-link" href="#">Movie</a>
+            <a class="nav-link" href="movies.html">Movie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Shows</a>
+            <a class="nav-link" href="#">Stream</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dramas</a>
+            <a class="nav-link" href="#">Orders</a>
           </li>
         </ul>
-
-        <select name="city" id="select-city">
-
-          <option value="mumbai" selected>Mumbai</option>
-          <option value="bangalore">Bangalore</option>
-          <option value="Chennai">Chennai</option>
-          <option value="Delhi">Delhi</option>
-          <option value="Pune">Pune</option>
-        </select>
+        <div id="select-city">
+          <select name="city" id="select-city">
+            <option value="mumbai" selected>Mumbai</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Pune">Pune</option>
+          </select>
+          
+        </div>
 
         <form class="d-flex navbar-form" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-outline-success" type="submit">
             Search
           </button>
-          <button class="btn btn-outline-success" style="width: 8rem;" type="submit">
-            Sign In
-          </button>
-          <button class="btn btn-outline-danger" style="width: 10rem;" type="submit">
-            Sign out
-          </button>
         </form>
+        <button class="btn btn-outline-success" class="log-in"  type="submit">
+          Log In
+        </button>
+        <button class="btn btn-outline-danger" class="sign-out"  type="submit">
+          Sign Up
+        </button>
       </div>
     </div>
   </nav>
@@ -299,22 +310,46 @@
 
           <div class="card swiper-slide">
             <div class="image-content">
-              <span class="overlay"></span>
-
-              <div class="card-image">
-                <img src="images/profile1.jpg" alt="" class="card-img">
+              <img src="../assets/event/img1.avif" alt="" class="card-img">
+              <div class="card-premiere-banner">
+                Primiere
               </div>
-            </div>
-
-            <div class="card-content">
-              <h2 class="name">David Dell</h2>
-              <p class="description">The lorem text the section that contains header with having open functionality.
-                Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-              <button class="button">View More</button>
             </div>
           </div>
           <div class="card swiper-slide">
+            <div class="image-content">
+              <img src="../assets/event/img2.avif" alt="" class="card-img">
+              <div class="card-premiere-banner">
+                Primiere
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <img src="../assets/event/img3.avif" alt="" class="card-img">
+              <div class="card-premiere-banner">
+                Primiere
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <img src="../assets/event/img4.avif" alt="" class="card-img">
+              <div class="card-premiere-banner">
+                Primiere
+              </div>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <img src="../assets/event/img5.avif" alt="" class="card-img">
+              <div class="card-premiere-banner">
+                Primiere
+              </div>
+            </div>
+          </div>
+          <!-- 
+            <div class="card swiper-slide">
             <div class="image-content">
               <span class="overlay"></span>
 
@@ -449,8 +484,15 @@
 
               <button class="button">View More</button>
             </div>
-          </div>
+          </div> 
+        -->
+
         </div>
+
+        <div class="show-slider-option">
+          Slide >>>
+        </div>
+
       </div>
 
       <div class="swiper-button-next swiper-navBtn movie-right-btn"></div>
@@ -464,7 +506,6 @@
   <div class="recommended-movies">
     <h1>Recommended Movies</h1>
     <div class=" d-flex justify-content-start flex-wrap card-container">
-
       <div class="card" style="width: 18rem;">
         <img src="../assets/card-banner/img1.avif" class="card-img-top" alt="...">
         <div class="card-body">

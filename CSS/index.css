@@ -1,16 +1,16 @@
-
-
 /* navigation bar  */
-.navbar{
+.navbar {
     background-color: #232D3F;
     /* z-index: 11; */
 }
-.nav-logo{
+
+.nav-logo {
     height: 50px;
     width: 70px;
     background: transparent;
 }
-.navbar-nav{
+
+.navbar-nav {
     margin: 0px;
     /* width: ; */
     margin-left: 4rem;
@@ -18,26 +18,31 @@
     flex-direction: row;
     justify-content: end; */
 }
-.navbar-nav li{
+
+.navbar-nav li {
     /* margin: 0 1.5rem; */
     /* width: 5rem; */
     text-align: center;
 }
-.nav-link{
+
+.nav-link {
     color: #FFF8C9;
 }
-.navbar-nav li:hover{
+
+.navbar-nav li:hover {
     background-color: lightblue;
     border-radius: 10px;
 }
-#select-city{
-    margin-right: 2rem;
+
+#select-city {
+    margin-right: 1rem;
     border: 0px;
     outline: 0px;
     background: transparent;
     color: #FFF8C9;
 }
-#select-city option{
+
+#select-city option {
     height: 10px;
     margin: 3px 0;
     border: 0px;
@@ -46,22 +51,68 @@
     background-color: black;
 
 }
+
+.select-city {
+    display: none;
+}
+
 /* .navbar-form{ */
-    /* width: 610px; */
+/* width: 610px; */
 /* } */
-.form-control{
+.form-control {
     background-color: transparent;
     color: #FFF8C9;
     /* width: 10rem; */
+    margin-top: 5PX;
+    height: 100%;
 }
-.form-control:focus{
+
+.form-control:focus {
     background-color: transparent;
-    color: #FFF8C9;;
+    color: #FFF8C9;
+    ;
+}
+.log-in{
+    outline: none;
+    border: none;
+}
+.sign-out{
+    outline: none;
+    border: none;
+}
+
+/* Media Query---> Navbar */
+@media only screen and (max-width: 500px) {
+    .navbar-nav {
+        margin: 0;
+    }
+
+    #select-city {
+        display: block;
+        margin: auto;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+    .sign-in{
+        margin-top: 5px;
+        width: 50%;
+    }
+    .sign-out{
+        margin-top: 5px;
+        width: 50%;
+
+    }
 }
 
 
 /* Floating navbar card  */
-.navbar-movie-floating-card{
+.navbar-movie-floating-card {
     display: none;
     position: absolute;
     top: 55px;
@@ -78,10 +129,12 @@
     /* display: flex; */
 
 }
-.navbar-movie-floating-card::-webkit-scrollbar{
+
+.navbar-movie-floating-card::-webkit-scrollbar {
     width: 10px;
 }
-.floating-card-container{
+
+.floating-card-container {
     width: auto;
     display: inline-block;
     align-items: center;
@@ -91,31 +144,37 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.floating-card-container .movie{
+
+.floating-card-container .movie {
     width: 48%;
     /* margin: 5px; */
     border-bottom: 2px solid grey;
     /* background-color: #008170; */
 }
-.movie img{
+
+.movie img {
     height: 90px;
     width: 90px;
     border-radius: 10px;
 }
-.floating-movie-detail{
+
+.floating-movie-detail {
     display: inline-block;
     margin-left: 10px;
-    
+
 }
-.floating-movie-detail  .movie-name{
+
+.floating-movie-detail .movie-name {
     font-weight: 900;
     margin: 2px 0px 2px 5px;
 }
-.movie .google-translate-logo{
+
+.movie .google-translate-logo {
     height: 25px;
     width: 25px;
 }
-.movie .languages{
+
+.movie .languages {
     display: inline-block;
 }
 
@@ -193,6 +252,37 @@
     align-items: end;
 }
 
+/* Media Queries for corausel */
+@media only screen and (max-width: 500px) {
+    .carousel-cont {
+        height: 250px;
+    }
+
+    .carousel img {
+        height: 250px;
+    }
+
+    .carousel-control-prev {
+        height: 40px;
+        width: 40px;
+        top: 115px;
+        left: 2rem;
+    }
+
+    .carousel-control-next {
+        height: 40px;
+        width: 40px;
+        top: 115px;
+        right: 2rem;
+    }
+
+    .carousel-control-prev i,
+    .carousel-control-next i {
+        font-size: 1rem;
+    }
+
+}
+
 
 .premiere-movies {
     margin: 30px;
@@ -213,20 +303,25 @@
     align-items: center;
     width: 90%;
     margin: auto;
+    box-sizing: border-box;
     /* text-align: center; */
     /* justify-content: space-between; */
 }
 
 .card {
     margin: 5px 0 10px 0;
-    /* height: 430px;
-    width: 185px; */
+    height: 475px;
+    width: 190px;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+
 }
 
-/* .card img { */
-    /* height: 330px;
-    width: inherit; */
-/* } */
+.card-img-top {
+    height: 65%;
+    width: 100%;
+}
 
 .card-body a {
     display: inline;
@@ -330,3 +425,6 @@
 .copyrights p {
     color: grey;
 }
+
+
+/* Media Queries */
